@@ -1,0 +1,21 @@
+/* ==UserStyle==
+@name           Taobao Home Lite
+@namespace      github.com/sparanoid/usercss
+@version        1.0.0
+@description    Taobao search only homepage
+@author         Sparanoid (t@sparanoid.com)
+==/UserStyle== */
+
+@-moz-document domain("www.taobao.com") {
+  body.taobao [data-name="nav"],
+  body.taobao [data-name="banner"],
+  body.taobao [data-name="superbanner"],
+  body.taobao [data-name="fixedtool"],
+  body.taobao .decorations-item,
+  body.taobao .screen-outer,
+  body.taobao .layer,
+  body.taobao .tb-footer,
+  body.taobao .tbh-qr-wrapper {
+    display: none !important;
+  }
+}
