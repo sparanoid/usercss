@@ -1,0 +1,79 @@
+/* ==UserStyle==
+@name           bilibili Enhanced
+@namespace      github.com/sparanoid/usercss
+@version        1.0.0
+@description    bilibili main site and live enhanced
+@author         Sparanoid
+==/UserStyle== */
+
+@-moz-document domain("live.bilibili.com") {
+
+  /* 直播增强 */
+  /* 修改全屏 modal 至右下角，方便连击收辣条 */
+  div[role="alertdialog"] {
+    width: auto;
+    height: auto;
+    display: block;
+    bottom: 1em;
+    right: 1em;
+    left: auto;
+    top: auto;
+  }
+
+  div[role="alertdialog"] .body-merge {
+    display: none;
+  }
+
+  div[role="alertdialog"] .dp-table-cell {
+    display: block;
+  }
+
+  /* 屏蔽逆天引流入场特效 */
+  .activity-welcome.welcome-animation-item {
+    display: none !important;
+  }
+
+  /* 缩小侧栏 */
+  .side-bar-cntr {
+    transform: scale(0.7) !important;
+    transform-origin: right bottom;
+  }
+
+  /* SC 显示增强 */
+  .pay-note-panel {
+    height: auto;
+    padding-top: 10px;
+  }
+  
+  .pay-note-panel .card-list .card-wrapper {
+    white-space: unset;
+  }
+  
+  .pay-note-panel .card-list {
+    overflow-y: auto;
+    max-height: 500px;
+  }
+  
+  .pay-note-panel .detail-info {
+    top: auto;
+    z-index: 2;
+  }
+  
+  .card-detail {
+    margin-top: 10px;
+  }
+
+}
+
+@-moz-document url-prefix("https://www.bilibili.com/read"), url-prefix("https://www.bilibili.com/judgement") {
+
+  /* 专栏 + 纪风委员会文本自由选定 */
+  * {
+    user-select: auto !important;
+  }
+
+  .watermark-wrap .watermark {
+    display: none;
+  }
+
+}
