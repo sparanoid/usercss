@@ -1,0 +1,863 @@
+/* ==UserStyle==
+@name           S1 Compact
+@namespace      github.com/sparanoid/usercss
+@version        1.0.0
+@description    A new userstyle
+@author         Sparanoid
+@preprocessor   less
+==/UserStyle== */
+
+@-moz-document domain("bbs.saraba1st.com") {
+  
+  // @import is not allowed in usercss
+  // @import url('https://cdn.jsdelivr.net/npm/root-variables/root-variables.css');
+
+  :root {
+
+    /*
+      Typography
+    ----------------------------------------------------------------------------*/
+    --fontstack-prefix: -apple-system, BlinkMacSystemFont,;
+    --fontstack-sans-serif: "Helvetica Neue", Arial, sans-serif;
+    --fontstack-serif: Georgia, serif;
+    --fontstack-monospace: Menlo, Consolas, monospace;
+    --fontstack-default: var(--fontstack-prefix) var(--fontstack-sans-serif);
+    --font-size-base: 1rem;
+    --font-size-factor: 1vw;
+    --font-size: calc(var(--font-size-base) + var(--font-size-factor));
+    --font-features: "halt","cv01","cv02","cv03";
+    --line-height: calc(20 / 14);
+
+    /*
+      Layout
+    ----------------------------------------------------------------------------*/
+    --breakpoint-lg: 1600px;
+    --breakpoint-md: 1080px;
+    --breakpoint-sm: 640px;
+    --breakpoint-xs: 400px;
+
+    --space-lg: 24vw;
+    --space-md: 8vw;
+    --space-sm: 4vw;
+    --space-xs: 1.2vw;
+
+    --border-lg: 4px;
+    --border-md: 2px;
+    --border-sm: 1px;
+
+    /* Nav */
+    --nav-padding: 1.4vmax;
+    --nav-item-space: 1vmax;
+
+    /*
+      Colors
+    ----------------------------------------------------------------------------*/
+
+    /* Color - text color */
+    --text-color-h: 238;
+    --text-color-s: 71%;
+    --text-color-l: 11%;
+    --text-color-hsl: var(--text-color-h), var(--text-color-s), var(--text-color-l);
+
+    --text-color: hsl(var(--text-color-hsl));
+    --text-color-0: hsla(var(--text-color-hsl), 0);
+    --text-color-3: hsla(var(--text-color-hsl), .03);
+    --text-color-5: hsla(var(--text-color-hsl), .05);
+    --text-color-7: hsla(var(--text-color-hsl), .07);
+    --text-color-10: hsla(var(--text-color-hsl), .1);
+    --text-color-20: hsla(var(--text-color-hsl), .2);
+    --text-color-30: hsla(var(--text-color-hsl), .3);
+    --text-color-40: hsla(var(--text-color-hsl), .4);
+    --text-color-50: hsla(var(--text-color-hsl), .5);
+    --text-color-60: hsla(var(--text-color-hsl), .6);
+    --text-color-70: hsla(var(--text-color-hsl), .7);
+    --text-color-80: hsla(var(--text-color-hsl), .8);
+    --text-color-90: hsla(var(--text-color-hsl), .9);
+    --text-color-light: hsl(var(--text-color-h), var(--text-color-s), calc(var(--text-color-l) / .9));
+    --text-color-dark: hsl(var(--text-color-h), var(--text-color-s), calc(var(--text-color-l) * .9));
+
+    /* Color - link color */
+    --link-color-h: 211;
+    --link-color-s: 100%;
+    --link-color-l: 50%;
+    --link-color-hsl: var(--link-color-h), var(--link-color-s), var(--link-color-l);
+
+    --link-color: hsl(var(--link-color-hsl));
+    --link-color-0: hsla(var(--link-color-hsl), 0);
+    --link-color-3: hsla(var(--link-color-hsl), .03);
+    --link-color-5: hsla(var(--link-color-hsl), .05);
+    --link-color-7: hsla(var(--link-color-hsl), .07);
+    --link-color-10: hsla(var(--link-color-hsl), .1);
+    --link-color-20: hsla(var(--link-color-hsl), .2);
+    --link-color-30: hsla(var(--link-color-hsl), .3);
+    --link-color-40: hsla(var(--link-color-hsl), .4);
+    --link-color-50: hsla(var(--link-color-hsl), .5);
+    --link-color-60: hsla(var(--link-color-hsl), .6);
+    --link-color-70: hsla(var(--link-color-hsl), .7);
+    --link-color-80: hsla(var(--link-color-hsl), .8);
+    --link-color-90: hsla(var(--link-color-hsl), .9);
+    --link-color-light: hsl(var(--link-color-h), var(--link-color-s), calc(var(--link-color-l) / .9));
+    --link-color-dark: hsl(var(--link-color-h), var(--link-color-s), calc(var(--link-color-l) * .9));
+
+    /* Color - background color */
+    --bg-color-h: 0;
+    --bg-color-s: 0%;
+    --bg-color-l: 100%;
+    --bg-color-hsl: var(--bg-color-h), var(--bg-color-s), var(--bg-color-l);
+
+    --bg-color: hsl(var(--bg-color-hsl));
+    --bg-color-0: hsla(var(--bg-color-hsl), 0);
+    --bg-color-3: hsla(var(--bg-color-hsl), .03);
+    --bg-color-5: hsla(var(--bg-color-hsl), .05);
+    --bg-color-7: hsla(var(--bg-color-hsl), .07);
+    --bg-color-10: hsla(var(--bg-color-hsl), .1);
+    --bg-color-20: hsla(var(--bg-color-hsl), .2);
+    --bg-color-30: hsla(var(--bg-color-hsl), .3);
+    --bg-color-40: hsla(var(--bg-color-hsl), .4);
+    --bg-color-50: hsla(var(--bg-color-hsl), .5);
+    --bg-color-60: hsla(var(--bg-color-hsl), .6);
+    --bg-color-70: hsla(var(--bg-color-hsl), .7);
+    --bg-color-80: hsla(var(--bg-color-hsl), .8);
+    --bg-color-90: hsla(var(--bg-color-hsl), .9);
+    --bg-color-light: hsl(var(--bg-color-h), var(--bg-color-s), calc(var(--bg-color-l) / .9));
+    --bg-color-dark: hsl(var(--bg-color-h), var(--bg-color-s), calc(var(--bg-color-l) * .9));
+
+    /* Color - code color, an inverted demo from link-color */
+    --code-color-h: calc(var(--link-color-h) + 180);
+    --code-color-s: var(--link-color-s);
+    --code-color-l: var(--link-color-l);
+    --code-color-hsl: var(--code-color-h), var(--code-color-s), var(--code-color-l);
+
+    --code-color: hsl(var(--code-color-hsl));
+    --code-color-0: hsla(var(--code-color-hsl), 0);
+    --code-color-3: hsla(var(--code-color-hsl), .03);
+    --code-color-5: hsla(var(--code-color-hsl), .05);
+    --code-color-7: hsla(var(--code-color-hsl), .07);
+    --code-color-10: hsla(var(--code-color-hsl), .1);
+    --code-color-20: hsla(var(--code-color-hsl), .2);
+    --code-color-30: hsla(var(--code-color-hsl), .3);
+    --code-color-40: hsla(var(--code-color-hsl), .4);
+    --code-color-50: hsla(var(--code-color-hsl), .5);
+    --code-color-60: hsla(var(--code-color-hsl), .6);
+    --code-color-70: hsla(var(--code-color-hsl), .7);
+    --code-color-80: hsla(var(--code-color-hsl), .8);
+    --code-color-90: hsla(var(--code-color-hsl), .9);
+    --code-color-light: hsl(var(--code-color-h), var(--code-color-s), calc(var(--code-color-l) / .9));
+    --code-color-dark: hsl(var(--code-color-h), var(--code-color-s), calc(var(--code-color-l) * .9));
+
+    /*
+      Color variants/variable mappings (based on our main color scheme)
+    ----------------------------------------------------------------------------*/
+    --border-color: var(--text-color-10);
+  }
+
+  // Begin general styles
+  :root {
+    --fontstack-prefix: -apple-system, BlinkMacSystemFont,;
+    --fontstack-sans-serif: "Helvetica Neue", "PingFang SC", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
+    --fontstack-monospace: Menlo, Consolas, "PingFang SC", "Microsoft Yahei", "WenQuanYi Micro Hei", monospace;
+
+    --text-color-h: 65;
+    --text-color-l: 10%;
+
+    --link-color-h: 50;
+    --link-color-l: 20%;
+    --link-color-s: 100%;
+
+    --bg-color-h: 65;
+    --bg-color-s: 43%;
+    --bg-color-l: 95%;
+
+    --border-color: var(--text-color-20);
+    --avatar-size: 30px;
+  }
+
+  /* Dark mode, that's all we need */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text-color-h: 65;
+      --text-color-l: 70%;
+      --text-color-s: 40%;
+
+      --link-color-h: 50;
+      --link-color-l: 50%;
+      --link-color-s: 100%;
+
+      --bg-color-h: 65;
+      --bg-color-l: 15%;
+      --bg-color-s: 10%;
+
+      --code-color-h: 300;
+      --code-color-l: calc(var(--link-color-l) * 1.4);
+    }
+
+    button.warning {
+      --btn-text: var(--bg-color);
+    }
+  }
+
+  body {
+    color: var(--text-color);
+    background-color: var(--bg-color) !important;
+    font-family: var(--fontstack-sans-serif);
+  }
+
+  a {
+    color: var(--link-color);
+  }
+
+  .px, .pt, .ps, 
+  #scbar_txt,
+  select, input, textarea {
+    color: var(--text-color);
+    background: var(--bg-color);
+    border-color: var(--border-color);
+  }
+
+  input::placeholder {
+    color: var(--text-color-40);
+  }
+
+  .scbar_icon_td,
+  .scbar_txt_td, .scbar_type_td {
+    background: none;
+  }
+
+  .bm {
+    background-color: var(--bg-color);
+  }
+
+  .pls,
+  .vwthd {
+    background-color: var(--link-color-10);
+  }
+
+  .ad .pls {
+    background: var(--link-color-10)!important;
+  }
+
+  #toptb {
+    background-color: var(--link-color-10);
+    border-color: var(--border-color);
+  }
+
+  /* Borders */
+  #postlist .pbn,
+  .pi,
+  .pls,
+  .bm,
+  .plhin,
+  .po,
+  #scbar,
+  .p_pop a,
+  #nv, #mu,
+  .btda,
+  .bbda,
+  .pi strong a,
+  .fl_row td,
+  .bm_h {
+    border-color: var(--border-color);
+  }
+
+  .pi strong a:hover {
+    border-color: var(--link-color);
+  }
+
+  #nv,
+  .pg a, 
+  .pg strong, 
+  .pgb a, 
+  .pg label {
+    background-color: var(--link-color-10);
+    color: var(--text-color);
+    border-color: var(--border-color);
+    backdrop-filter: blur(10px);
+  }
+
+  .pg strong {
+    color: var(--bg-color);
+    background-color: var(--link-color);
+  }
+
+  #nv {
+    background-color: hsla(var(--link-color-h), calc(var(--link-color-s) * .5), var(--bg-color-l), .95);
+  }
+
+  .pg a:hover, .pgb a:hover {
+    color: var(--link-color);
+    border-color: currentColor;
+  }
+
+  #nv li a {
+    color: var(--text-color);
+  }
+
+  #nv li.a {
+    background-color: var(--link-color-5)
+  }
+
+  #nv li a:hover,
+  #nv li.hover a:hover, #nv li.hover a {
+    color: var(--link-color);
+    background: var(--border-color);
+    text-decoration: none;
+  }
+
+  #nv li {
+    background: transparent;
+  }
+
+  #qmenu {
+    background: var(--link-color-10);
+    color: var(--text-color);
+  }
+
+  #qmenu_menu {
+    border-color: var(--border-color);
+  }
+
+  .jump_bdl li {
+    background: var(--link-color-10);
+    border-color: var(--border-color);  
+  }
+
+  .jump_bdl a {
+    color: var(--text-color);
+  }
+
+  .jump_bdl .a a, .jump_bdl .a a:hover {
+    background-color: var(--text-color-10);
+  }
+
+  .xg1, 
+  .xg1 a {
+    color: var(--text-color-40) !important;
+  }
+
+  .pipe {
+    color: var(--border-color);
+  }
+
+  .t_f a {
+    color: var(--link-color);
+  }
+
+  #um, #um a {
+    color: var(--text-color);
+  }
+
+  .p_pop, 
+  .p_pof, 
+  .sllt {
+    background-color: var(--bg-color);
+    border-color: var(--border-color);
+  }
+
+  .p_pop a:hover, 
+  .p_pop a.a, 
+  #sctype_menu .sca {
+    background-color: var(--text-color-10);
+    color: var(--link-color-light);
+  }
+
+  .pl .quote {
+    background-color: var(--link-color-10);
+  }
+
+  .quote {
+    color: var(--text-color);
+  }
+
+  i.pstatus {
+    color: hsl(30, var(--link-color-s), var(--link-color-l));
+  }
+
+  #p_btn a {
+    background: var(--link-color-10);
+    border-radius: 4px;
+  }
+
+  #p_btn i {
+    background: transparent;
+  }
+
+  .locked {
+    color: hsl(340, var(--link-color-s), var(--link-color-l));
+    background-color: hsla(340, var(--link-color-s), var(--link-color-l), .1);
+  }
+
+  .pcb em {
+    color: hsl(340, var(--link-color-s), var(--link-color-l));
+  }
+
+  .pls .avtm {
+    width: var(--avatar-size);
+    max-height: var(--avatar-size);
+    _height: var(--avatar-size);
+    border-width: 3px
+  }
+
+  .tedt {
+    border-color: var(--border-color);
+  }
+
+  .tedt .bar {
+    background-color: var(--link-color-5);
+    border-color: var(--border-color);
+  }
+
+  .tedt .pt,
+  .tedt .area {
+    background-color: var(--bg-color);
+  }
+
+  .bm_h {
+    background-color: var(--link-color-10);
+  }
+
+  .pgbtn a {
+    color: var(--text-color);
+    border-color: var(--border-color) !important;
+    box-shadow: none;
+  }
+
+  .pgbtn a:hover {
+    color: var(--link-color);
+    background-color: var(--link-color-10);
+    border-color: var(--link-color) !important;
+  }
+
+  .chart,
+  .chart em {
+    color: var(--text-color);
+  }
+
+  .xi2, .xi2 a, .xi3 a {
+    color: var(--link-color);
+  }
+
+  #ft {
+    color: var(--text-color-40);
+    border-color: var(--border-color);
+  }
+
+  #ft a {
+    color: var(--text-color);
+  }
+
+  .bmw .bm_h a,
+  .xg2 {
+    color: var(--link-color);
+  }
+
+  .bmw .bm_h {
+    border-color: var(--border-color) !important;
+    background-color: var(--link-color-10);
+  }
+
+  .ttp a, .ttp strong {
+    color: var(--link-color);
+    background-color: var(--link-color-5);
+    border-color: var(--border-color);
+  }
+
+  .ttp .num {
+    color: var(--link-color-70) !important;
+    background-color: var(--link-color-10);
+  }
+
+  .ttp a:hover {
+    color: var(--link-color);
+    background-color: var(--link-color-10);
+    border-color: var(--link-color);
+  }
+
+  .ttp .a a {
+    color: var(--bg-color);
+    background-color: var(--link-color);
+    border-color: var(--link-color);
+  }
+
+  .ttp .a .num {
+    background-color: var(--bg-color-70);
+  }
+
+  .ttp .a a:hover {
+    background-color: var(--link-color-80);
+  }
+
+  .tl .th {
+    background-color: var(--link-color-20);
+    border-color: var(--border-color);
+  }
+
+  .tl tr:hover th, .tl tr:hover td {
+    background-color: var(--link-color-10);
+  }
+
+  .tl th, .tl td {
+    border-color: var(--border-color);
+  }
+
+  .tl td em, .tl td em a,
+  .tl th em, .tl th em a {
+    color: var(--text-color-80);
+  }
+
+  .tl th a:visited, .tl td.fn a:visited {
+    color: var(--text-color-80);
+  }
+
+  .tl .ts th, .tl .ts td {
+    background-color: var(--link-color-10);
+    border-color: var(--border-color);
+  }
+
+  .tps a {
+    color: var(--text-color-50);
+  }
+
+  .tps a:hover {
+    color: var(--text-color);
+    background-color: var(--border-color);
+  }
+
+  #autopbn {
+    border-color: var(--border-color);
+  }
+
+  #autopbn:hover {
+    background-color: var(--link-color-10);
+    border-color: var(--link-color);
+  }
+
+  #newspecial_menu a:hover {
+    color: var(--link-color);
+  }
+
+  .sllt_p a {
+    color: var(--text-color);
+  }
+
+  .sl_pv {
+    background: var(--link-color-10);
+    backdrop-filter: blur(10px);  
+    border-color: var(--border-color);
+  }
+
+  .psth {
+    background: hsla(10, var(--link-color-s), var(--link-color-l), .2);
+  }
+
+  .ratl .xw1 .xi1 {
+    color: hsla(10, var(--link-color-s), var(--text-color-l), 1);
+    background-color: hsla(10, var(--link-color-s), var(--link-color-l), .2);
+  }
+
+  .ratl th, .ratl td, .ratc,
+  .f_c .list th, .f_c .list td,
+  .f_c .list {
+    border-color: var(--border-color);
+  }
+
+  #atarget, .unchk, .chked {
+    color: var(--text-color);
+  }
+
+  #scrolltop {
+    background-color: var(--text-color-10);
+    backdrop-filter: blur(10px);
+    border-color: var(--border-color);
+  }
+
+  #scrolltop a {
+    color: var(--text-color);
+    border-color: var(--border-color);
+  }
+
+  .m_c {
+    background-color: var(--bg-color);
+  }
+
+  .t_l, .t_c, .t_r, .m_l, .m_r, .b_l, .b_c, .b_r {
+    background-color: var(--link-color);
+    opacity: .1;
+  }
+
+  .flb em {
+    color: var(--text-color);
+  }
+
+  .m_c .o {
+    background-color: var(--text-color-5);
+    border-color: var(--border-color);  
+  }
+
+  .pn {
+    background: var(--text-color-10);
+    border-color: var(--border-color);  
+    color: var(--text-color);
+    box-shadow: none;
+  }
+
+  .pnc, a.pnc {
+    color: var(--text-color) !important;
+  }
+
+  .ct2_a, .ct3_a {
+    background: transparent;
+    border-color: var(--border-color);
+  }
+
+  .tb {
+    border-color: var(--border-color);
+  }
+
+  .tb a {
+    color: var(--text-color);
+    background-color: var(--text-color-10);
+    border-color: transparent;
+  }
+
+  .tb .a a, .tb .current a {
+    background-color: var(--link-color-10);
+    border-bottom-color: var(--link-color);
+  }
+
+  .dt,
+  .dt td, .dt th {
+    border-color: var(--border-color);
+  }
+
+  .dt th {
+    background-color: var(--link-color-10);
+  }
+
+  .tbmu {
+    border-color: var(--border-color);
+  }
+
+  .tbmu a {
+    color: var(--text-color);
+  }
+
+  .tbmu .a {
+    color: var(--link-color);
+  }
+
+  .exfm {
+    background-color: var(--text-color-10);
+  }
+
+  .tfm .d {
+    color: var(--code-color);
+  }
+
+  .ftid a {
+    color: var(--text-color) !important;
+    background: transparent;
+    border-color: var(--border-color);
+  }
+
+  .sltm {
+    background-color: var(--bg-color);
+    border-color: var(--border-color);
+  }
+
+  .sltm li {
+    color: var(--text-color);
+  }
+
+  .sltm li:hover {
+    color: var(--link-color);
+  }
+
+  #calendar {
+    background-color: var(--bg-color);
+    border-color: var(--border-color);
+  }
+
+  #calendar_week a {
+    color: var(--text-color);
+  }
+
+  .calendar_expire, .calendar_expire a:link, .calendar_expire a:visited {
+    color: var(--text-color-40);
+  }
+
+  .calendar_default, .calendar_default a:link, .calendar_default a:visited {
+    color: var(--text-color);
+  }
+
+  .calendar_today, .calendar_today a:link, .calendar_today a:visited {
+    color: var(--link-color);
+  }
+
+  .tbn {
+    background-color: var(--link-color-10);
+  }
+
+  .tbn li {
+    border-color: var(--border-color);
+  }
+
+  .tbn li.a {
+    border-color: var(--border-color);
+    background-color: var(--link-color-10);
+  }
+
+  .nfl .f_c {
+    background-color: var(--bg-color);
+    border-color: var(--border-color);
+  }
+
+  .alert_error a,
+  .f_c a {
+    color: var(--link-color);
+  }
+
+  .alt, .alt th, .alt td {
+    background-color: var(--text-color-5);
+  }
+
+  .tdats th, .tdats td {
+    border-color: transparent;
+  }
+
+  .tdat th, .tdat td {
+    border-color: var(--border-color);
+  }
+
+  .tdats .h th {
+    color: var(--link-color);
+    border-color: var(--border-color);  
+    background: var(--link-color-10);
+  }
+
+  .tfx .alt, .tfx .alt th, .tfx .alt td {
+    background: var(--link-color-10);
+  }
+
+  .tfx th, .tfx td {
+    background: var(--link-color-10);
+  }
+
+  .ct1 {
+    border-color: var(--border-color);
+  }
+
+  .pf_l em {
+    color: var(--text-color-50);
+  }
+
+  #uhd {
+    background-color: var(--link-color-10);
+    border-color: var(--border-color);  
+  }
+
+  #uhd .tb a {
+    border-color: transparent;
+    border-bottom-color: var(--border-color);
+  }
+
+  #uhd .tb .a a {
+    color: var(--link-color);
+    border-color: transparent;
+    border-bottom-color: var(--link-color);
+  }
+
+  #uhd .mn a {
+    color: var(--text-color);
+  }
+
+  #uhd .mn a:hover {
+    color: var(--link-color);
+  }
+
+  .blk a:hover {
+    --avatar-size: 120px;
+  }
+
+  .sttl {
+    border-color: var(--border-color);
+    background-color: var(--link-color-10);
+  }
+
+  #scform_tb .a {
+    color: var(--link-color);
+  }
+
+  .slst a {
+    color: var(--link-color);
+  }
+
+  .slst a:visited {
+    color: var(--link-color-40);
+  }
+
+  .pbw p {
+    color: var(--text-color);
+  }
+
+  .slst p span {
+    color: var(--text-color-40);
+  }
+
+  .slst p span a, .slst p span a:visited {
+    color: var(--link-color-40);
+  }
+
+  #scform_srchtxt {
+    border: 1px solid;
+    background-color: var(--bg-color);
+  }
+
+  a.pn {
+    color: var(--text-color) !important;
+  }
+
+  .buddy li {
+    background-color: var(--text-color-5);
+    border-color: var(--border-color);
+  }
+
+  .avtm img {
+    width: var(--avatar-size);
+  }
+
+  .pls .avatar {
+    margin-bottom: -10px;
+  }
+
+  .pls .avatar + img {
+    display: none;
+  }
+
+  .pls p,
+  .pls .tns,
+  .pls .pil,
+  .pls .o {
+    display: none;
+  }
+
+  .t_fsz {
+    min-height: auto;
+  }
+
+  .mobile-type {
+    margin: -15px 0 -85px 123px;
+    width: 38px;
+    height: 62px;
+  }
+
+  .mobile-type a {
+    width: 26px;
+    height: 46px;
+    background-size: cover;
+  }
+
+  i.pstatus {
+    text-align: left;
+    color: ff5722;
+  }
+}
