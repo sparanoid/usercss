@@ -1,0 +1,32 @@
+/* ==UserStyle==
+@name           niconico live lite
+@namespace      github.com/sparanoid/usercss
+@version        1.0.0
+@description    Cleaner niconico
+@preprocessor   stylus 
+@author         liveholo
+@var            checkbox hide "Hide Akashic Game Layer" 1
+@var select   fontName   "Font name"    ["none", "block"]
+@var select theme "Theme" ["dark:Dark theme", "light:Light theme"]
+
+
+==/UserStyle== */
+
+@-moz-document domain("live2.nicovideo.jp") {
+  
+    [data-layer-name="akashicGameViewLayer"] {
+    if theme == dark {
+                display: block !important;
+    } else if theme == light {
+                display: none !important;
+    }
+
+
+    }
+    [data-layer-name="telopLayer"] {
+      display: none;
+    }
+    
+    [data-layer-name="fingerprintLayer"] { display: none; }
+    
+}
