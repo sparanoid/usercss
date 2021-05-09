@@ -1,0 +1,56 @@
+/* ==UserStyle==
+@name           Plex Player Enhance
+@namespace      github.com/sparanoid/usercss
+@version        1.0.0
+@description    Fix shitty default Plex fullscreen player and make your life great again.
+@author         Sparanoid
+==/UserStyle== */
+
+@-moz-document domain("app.plex.tv") {
+  :root {
+    --ppe-offset: 60px;
+  }
+  
+  [class^='Player-fullPlayerContainer'] [class^='PlayPauseOverlay-playCircle'] {
+    display: none;
+  }
+  
+  [class^='Player-fullPlayerContainer'] [class^='ControlsContainer-controlsContainer'] {
+    height: calc(100px - var(--ppe-offset));
+  }
+  
+  [class^='Player-fullPlayerContainer'] [class^='BottomBar-bottomBar'] {
+    bottom: calc(var(--ppe-offset) * -1);
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, hsl(0deg 0% 10% / 0%), hsl(0deg 0% 10% / 50%));
+    box-shadow: none;
+  }
+  
+  [class^='Player-fullPlayerContainer'] [class^='PlayerControlsMetadata-container'] {
+    display: flex;
+    gap: 1em;
+  }
+
+  [class^='Player-fullPlayerContainer'] [class^='PlayerControls-volumeSlider'] {
+    display: none;
+  }
+  
+  [class^='Player-fullPlayerContainer'] [class^='PlayerControls-volumeButton'] {
+    margin-right: 0;
+  }
+  
+  [class^='AudioVideoFullPlayer-topBar'] {
+    --size: 30px;
+    height: var(--size);
+    background-color: transparent;
+    background-image: linear-gradient(to top, hsl(0deg 0% 10% / 0%), hsl(0deg 0% 10% / 20%));
+  }
+  
+  [class^='Player-fullPlayerContainer'] [class^='SeekBar-seekBarTrack']:before {
+    background-color: hsl(0deg 0% 70% / 20%);
+  }
+  
+  [class^='Player-fullPlayerContainer'] [class^='SeekBar-seekBar']:hover [class^='SeekBar-seekBarTrack']:before {
+    background-color: hsl(0deg 0% 90% / 40%);
+  }
+}
