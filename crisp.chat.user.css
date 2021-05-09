@@ -1,0 +1,15 @@
+/* ==UserStyle==
+@name           Crisp.chat selectable
+@namespace      github.com/sparanoid/usercss
+@version        1.0.0
+@description    A new userstyle
+@author         Sparanoid (t@sparanoid.com)
+==/UserStyle== */
+
+@-moz-document domain("app.crisp.chat") {
+
+  .c-conversation-box-content-message-bubble__field {
+    user-select: auto !important;
+  }
+
+}
