@@ -1,0 +1,14 @@
+/* ==UserStyle==
+@name           TwitCasting Date Reveal
+@namespace      github.com/sparanoid/usercss
+@version        1.0.0
+@description    A new userstyle
+@author         Sparanoid
+==/UserStyle== */
+
+@-moz-document domain("twitcasting.tv") {
+  .tw-player-comment-list .tw-comment-item-date {
+    display: block;
+    margin-top: .5rem;
+  }
+}
