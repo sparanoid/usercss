@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Taobao Home Lite
 @namespace      github.com/sparanoid/usercss
-@version        1.0.0
+@version        1.0.1
 @description    Taobao search only homepage
 @author         Sparanoid (t@sparanoid.com)
 ==/UserStyle== */
@@ -17,5 +17,9 @@
   body.taobao .tb-footer,
   body.taobao .tbh-qr-wrapper {
     display: none !important;
+  }
+  
+  body, html {
+    background: #fff !important;
   }
 }
