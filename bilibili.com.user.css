@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili Enhanced
 @namespace      github.com/sparanoid/usercss
-@version        1.0.0
+@version        1.0.1
 @description    bilibili main site and live enhanced
 @author         Sparanoid
 ==/UserStyle== */
@@ -41,26 +41,31 @@
 
   /* SC 显示增强 */
   .pay-note-panel {
-    height: auto;
-    padding-top: 10px;
+    height: auto !important;
+    padding-top: 10px !important;
   }
   
   .pay-note-panel .card-list .card-wrapper {
-    white-space: unset;
+    white-space: unset !important;
   }
   
   .pay-note-panel .card-list {
-    overflow-y: auto;
-    max-height: 500px;
+    overflow-y: auto !important;
+    max-height: 300px !important;
+    scrollbar-width: none;
   }
-  
+
+  .pay-note-panel .card-list::-webkit-scrollbar { 
+    display: none;
+  }
+
   .pay-note-panel .detail-info {
-    top: auto;
-    z-index: 2;
+    top: auto !important;
+    z-index: 2 !important;
   }
   
   .card-detail {
-    margin-top: 10px;
+    margin-top: 10px !important;
   }
 
 }
