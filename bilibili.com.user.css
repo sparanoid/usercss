@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili Enhanced
 @namespace      github.com/sparanoid/usercss
-@version        1.0.2
+@version        1.0.3
 @description    bilibili main site and live enhanced
 @author         Sparanoid
 ==/UserStyle== */
@@ -37,6 +37,16 @@
   .side-bar-cntr {
     transform: scale(0.7) !important;
     transform-origin: right bottom;
+  }
+  
+  /* 删除直播水印 */
+  .web-player-icon-roomStatus {
+    display: none;
+  }
+  
+  /* 删除反馈按钮 */
+  .web-player-icon-feedback {
+    display: none;
   }
 
   /* SC 显示增强 */
