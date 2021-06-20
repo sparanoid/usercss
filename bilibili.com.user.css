@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili Enhanced
 @namespace      github.com/sparanoid/usercss
-@version        1.0.3
+@version        1.0.4
 @description    bilibili main site and live enhanced
 @author         Sparanoid
 ==/UserStyle== */
@@ -77,6 +77,11 @@
   
   .card-detail {
     margin-top: 10px !important;
+  }
+  
+  /* hide fly-in superchats */
+  #chat-msg-bubble-vm {
+    display: none;
   }
 
 }
