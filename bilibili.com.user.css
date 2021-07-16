@@ -1,10 +1,19 @@
 /* ==UserStyle==
 @name           bilibili Enhanced
 @namespace      github.com/sparanoid/usercss
-@version        1.0.4
+@version        1.0.5
 @description    bilibili main site and live enhanced
 @author         Sparanoid
 ==/UserStyle== */
+
+@-moz-document domain("t.bilibili.com"), domain("space.bilibili.com") {
+  
+  /* Make video card draggable */
+  .post-content .live-container a,
+  .post-content .video-container a {
+    display: block;
+  }
+}
 
 @-moz-document domain("live.bilibili.com") {
 
