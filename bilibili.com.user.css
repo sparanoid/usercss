@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili Enhanced
 @namespace      github.com/sparanoid/usercss
-@version        1.0.5
+@version        1.0.6
 @description    bilibili main site and live enhanced
 @author         Sparanoid
 ==/UserStyle== */
@@ -103,6 +103,14 @@
   }
 
   .watermark-wrap .watermark {
+    display: none;
+  }
+
+}
+
+@-moz-document url-prefix("https://www.bilibili.com/bangumi") {
+
+  .bpx-player-stardcard {
     display: none;
   }
 
