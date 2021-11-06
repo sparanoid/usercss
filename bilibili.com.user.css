@@ -6,6 +6,15 @@
 @author         Sparanoid
 ==/UserStyle== */
 
+@-moz-document domain("bilibili.com") {
+  
+  /* stupid bilibili logo when video player paused */
+  .bilibili-player-video-state,
+  .bpx-player-state-wrap {
+    display: none !important;
+  }
+}
+
 @-moz-document domain("t.bilibili.com"), domain("space.bilibili.com") {
   
   /* Make video card draggable */
