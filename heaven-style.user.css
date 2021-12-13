@@ -1,0 +1,16 @@
+/* ==UserStyle==
+@name           Heaven Style
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A userstyle to disable B&W filter on Chinese websites
+@author         Sparanoid
+==/UserStyle== */
+
+@-moz-document domain("example.com") {
+  /* This block is to make userstyle valid */
+}
+
+html,
+body {
+  filter: none !important;
+}
