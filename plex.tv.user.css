@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name           Plex Player Enhanced
 @namespace      github.com/sparanoid/usercss
-@version        1.0.1
-@description    Fix shitty default Plex fullscreen player and make your life great again.
+@version        1.0.2
+@description    Replace shitty default Plex fullscreen player with a shinny thiner UI and make your life great again.
 @author         Sparanoid
 ==/UserStyle== */
 
@@ -52,5 +52,9 @@
   
   [class^='Player-fullPlayerContainer'] [class^='SeekBar-seekBar']:hover [class^='SeekBar-seekBarTrack']:before {
     background-color: hsl(0deg 0% 90% / 40%);
+  }
+  
+  [class^='Player-fullPlayerContainer'] [class^='MetadataPosterTitle'] {
+    user-select: auto;
   }
 }
