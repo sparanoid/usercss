@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili Enhanced
 @namespace      github.com/sparanoid/usercss
-@version        1.0.6
+@version        1.0.7
 @description    bilibili main site and live enhanced
 @author         Sparanoid
 ==/UserStyle== */
@@ -13,6 +13,18 @@
   .bpx-player-state-wrap {
     display: none !important;
   }
+  
+  /* bilibili name reveal */
+  #h-name,
+  .bili-dyn-title__text,
+  .name,
+  .username,
+  .dyn-orig-author__name,
+  .bili-user-profile-view__info__uname
+  {
+    font-family: Menlo, Consolas, monospace !important;
+  }
+
 }
 
 @-moz-document domain("t.bilibili.com"), domain("space.bilibili.com") {
