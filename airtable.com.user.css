@@ -1,0 +1,13 @@
+/* ==UserStyle==
+@name           Airtable Ads Free
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    Remove Airtable call-to-action banners
+@author         Sparanoid
+==/UserStyle== */
+
+@-moz-document domain("airtable.com") {
+  .events > .cyanLight2 {
+    display: none !important;
+  }
+}
