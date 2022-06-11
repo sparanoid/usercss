@@ -762,6 +762,11 @@
   .tl #forumnewshow td:hover {
     background-color: var(--link-color-10);
   }
+  
+  .newthread tr th, 
+  .newthread tr td {
+    background-color: var(--link-color-10);
+  }
 
   .tps a {
     color: var(--text-color-50);
@@ -1109,5 +1114,9 @@
   i.pstatus {
     text-align: left;
     color: ff5722;
+  }
+  
+  .adsbygoogle {
+    display: none !important;
   }
 }
