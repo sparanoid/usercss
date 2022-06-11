@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           S1 Enhanced
 @namespace      github.com/sparanoid/usercss
-@version        1.0.2
+@version        1.0.3
 @description    Enhanced color scheme and padding
 @author         Sparanoid
 @preprocessor   less
@@ -9,8 +9,8 @@
 
 @-moz-document domain("bbs.saraba1st.com") {
   
-  // @import is not allowed in usercss
-  // @import url('https://cdn.jsdelivr.net/npm/root-variables/root-variables.css');
+  /* @import is not allowed in usercss */
+  /* @import url('https://cdn.jsdelivr.net/npm/root-variables/root-variables.css'); */
 
   :root {
 
@@ -747,6 +747,20 @@
   .tl .ts th, .tl .ts td {
     background-color: var(--link-color-10);
     border-color: var(--border-color);
+  }
+  
+  .tl #forumnewshow {
+    background-color: var(--link-color-20);
+  }
+  
+  .tl #forumnewshow a {
+    color: var(--link-color);
+    border-color: var(--link-color-20);
+  }
+  
+  .tl #forumnewshow th:hover, 
+  .tl #forumnewshow td:hover {
+    background-color: var(--link-color-10);
   }
 
   .tps a {
