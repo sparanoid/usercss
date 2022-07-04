@@ -12,7 +12,11 @@
     #J_app,
     #J_fs_act,
     #J_news,
-    #treasure {
+    #treasure,
+    #top-banner,
+    .lc-goods-seckill,
+    .lc-ad-base,
+    .lc-goods-guess {
         display: none !important;
     }
 }
