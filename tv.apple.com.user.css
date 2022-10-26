@@ -1,0 +1,15 @@
+/* ==UserStyle==
+@name           Remove Apple TV Gradient
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    Remove the gradient layer when video playback is paused
+@author         Sparanoid
+==/UserStyle== */
+
+@-moz-document domain("tv.apple.com") {
+  /* Insert code here... */
+  
+  .gradient {
+    display: none;
+  }
+}
