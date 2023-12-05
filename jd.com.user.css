@@ -1,28 +1,30 @@
 /* ==UserStyle==
 @name           Lightweight jd.com
 @namespace      github.com/sparanoid/usercss
-@version        1.0.1
+@version        1.0.2
 @description    A new userstyle
 @author         t@sparanoid.com
 ==/UserStyle== */
 
 @-moz-document domain("jd.com") {
-    .jTdCode,
-    #J_promotional-top,
-    #J_app,
-    #J_fs_act,
-    #J_news,
-    #treasure,
-    #top-banner,
-    .lc-goods-seckill,
-    .lc-ad-base,
-    .lc-goods-guess {
-        display: none !important;
-    }
+  .jTdCode,
+  #J_promotional-top,
+  #J_app,
+  #J_fs_act,
+  #J_news,
+  #treasure,
+  #top-banner,
+  #navitems,
+  .lc-goods-seckill,
+  .lc-ad-base,
+  .lc-goods-guess,
+  .mobile_static {
+      display: none !important;
+  }
 }
 
 @-moz-document domain("item.jd.com") {
-    .jdm-tbar-tab-qrcode {
-        display: none !important;
-    }
+  .jdm-tbar-tab-qrcode {
+    display: none !important;
+  }
 }
