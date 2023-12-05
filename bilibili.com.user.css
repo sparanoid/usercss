@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili Enhanced
 @namespace      github.com/sparanoid/usercss
-@version        1.0.7
+@version        1.0.8
 @description    bilibili main site and live enhanced
 @author         Sparanoid
 ==/UserStyle== */
@@ -23,6 +23,10 @@
   .bili-user-profile-view__info__uname
   {
     font-family: Menlo, Consolas, monospace !important;
+  }
+
+  .no-select, .none-select {
+    user-select: auto !important;
   }
 
 }
