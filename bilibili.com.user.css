@@ -118,6 +118,10 @@
     display: none;
   }
 
+  /* 逆天前端打码遮挡 😅 */
+  #web-player-module-area-mask-panel {
+    display: none !important;
+  }
 }
 
 @-moz-document url-prefix("https://www.bilibili.com/read"), url-prefix("https://www.bilibili.com/judgement") {
