@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili Enhanced
 @namespace      github.com/sparanoid/usercss
-@version        1.0.9
+@version        1.0.10
 @description    bilibili main site and live enhanced
 @author         Sparanoid
 ==/UserStyle== */
@@ -43,15 +43,15 @@
 @-moz-document domain("live.bilibili.com") {
 
   /* 直播增强 */
-  /* 修改全屏 modal 至右下角，方便连击收辣条 */
+  /* 修改全屏 modal 至左上角，方便连击收辣条 */
   div[role="alertdialog"] {
     width: auto;
     height: auto;
     display: block;
-    bottom: 1em;
-    right: 1em;
-    left: auto;
-    top: auto;
+    bottom: auto;
+    right: auto;
+    left: 1em;
+    top: 1em;
   }
 
   div[role="alertdialog"] .body-merge {
