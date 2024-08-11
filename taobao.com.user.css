@@ -1,21 +1,24 @@
 /* ==UserStyle==
 @name           Lightweight Taobao
 @namespace      github.com/sparanoid/usercss
-@version        1.0.2
+@version        1.0.3
 @description    Taobao search-only homepage
 @author         Sparanoid (t@sparanoid.com)
 ==/UserStyle== */
 
 @-moz-document domain("www.taobao.com") {
-  body.taobao [data-name="nav"],
-  body.taobao [data-name="banner"],
-  body.taobao [data-name="superbanner"],
-  body.taobao [data-name="fixedtool"],
-  body.taobao .decorations-item,
-  body.taobao .screen-outer,
-  body.taobao .layer,
-  body.taobao .tb-footer,
-  body.taobao .tbh-qr-wrapper {
+  body [data-name="nav"],
+  body [data-name="banner"],
+  body [data-name="superbanner"],
+  body [data-name="fixedtool"],
+  body [data-sg-type="hotWord"],
+  body [data-spm="pop"],
+  body .decorations-item,
+  body .screen-outer,
+  body .layer,
+  body .tb-footer,
+  body .tbh-logo-right,
+  body .tbh-qr-wrapper {
     display: none !important;
   }
   
