@@ -1,12 +1,13 @@
 /* ==UserStyle==
 @name           Lightweight Taobao
 @namespace      github.com/sparanoid/usercss
-@version        1.0.3
+@version        1.0.4
 @description    Taobao search-only homepage
 @author         Sparanoid (t@sparanoid.com)
 ==/UserStyle== */
 
 @-moz-document domain("www.taobao.com") {
+  body [data-name="plugin"],
   body [data-name="nav"],
   body [data-name="banner"],
   body [data-name="superbanner"],
