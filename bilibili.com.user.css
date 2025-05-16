@@ -122,6 +122,11 @@
   #web-player-module-area-mask-panel {
     display: none !important;
   }
+
+  /* 小黄车 */
+  #shop-popover-vm {
+    display: none;
+  }
 }
 
 @-moz-document url-prefix("https://www.bilibili.com/read"), url-prefix("https://www.bilibili.com/judgement") {
