@@ -1,0 +1,22 @@
+/* ==UserStyle==
+@name           anime1.cc Full Width
+@namespace      github.com/sparanoid/usercss
+@version        1.0.0
+@description    Make anime1.cc full-width and more responsive
+@author         Me
+==/UserStyle== */
+@-moz-document domain("anime1.cc") {
+  .site-header .header-content,
+  .site-content {
+    width: 100%;
+    max-width: none;
+  }
+
+  .content-area {
+    width: 76% !important;
+  }
+
+  .widget-area {
+    width: 24% !important;
+  }
+}
