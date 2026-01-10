@@ -1,13 +1,13 @@
 /* ==UserStyle==
 @name           S1 Enhanced
 @namespace      github.com/sparanoid/usercss
-@version        1.0.3
+@version        1.0.4
 @description    Enhanced color scheme and padding
 @author         Sparanoid
 @preprocessor   less
 ==/UserStyle== */
 
-@-moz-document domain("bbs.saraba1st.com") {
+@-moz-document domain("bbs.saraba1st.com"), domain("stage1st.com") {
   
   /* @import is not allowed in usercss */
   /* @import url('https://cdn.jsdelivr.net/npm/root-variables/root-variables.css'); */
